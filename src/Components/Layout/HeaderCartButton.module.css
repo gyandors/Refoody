@@ -1,0 +1,37 @@
+.button {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  background-color: #920101;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.button:hover,
+.button:focus {
+  outline: none;
+  background-color: #770000;
+}
+
+.icon {
+  width: 1.45rem;
+}
+
+.label {
+  margin: 0 0.75rem;
+}
+
+.count {
+  padding: 0.4rem 0.85rem;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 40%;
+  background-color: #df1616;
+}
+
+.button:hover .count,
+.button:focus .count {
+  background-color: #770000;
+}

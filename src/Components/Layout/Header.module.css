@@ -1,0 +1,33 @@
+.header {
+  padding: 2.2rem 0;
+  height: 4rem;
+  background-color: #df1616;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main-heading h1 {
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.main-heading p {
+  text-align: center;
+  font-style: oblique;
+  font-size: 0.8rem;
+}
+
+.meals-img {
+  width: 100%;
+  height: 20rem;
+  overflow: hidden;
+}
+
+.meals-img img {
+  width: 110%;
+  height: 100%;
+  object-fit: cover;
+  transform: rotateZ(-5deg) translate(-1rem, -5rem);
+}
