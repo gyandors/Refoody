@@ -35,3 +35,13 @@
 .button:focus .count {
   background-color: #770000;
 }
+
+@media screen and (max-width: 400px) {
+  .label {
+    display: none;
+  }
+
+  .icon {
+    margin-right: 0.75rem;
+  }
+}
