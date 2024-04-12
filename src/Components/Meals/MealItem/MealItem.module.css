@@ -1,0 +1,33 @@
+.meal-item {
+  margin: 1rem;
+  margin-bottom: 0;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #7c7c7c;
+  animation: ItemAnimate 1s ease-in;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.price {
+  color: #df1616;
+  font-weight: bold;
+}
+
+.desc {
+  font-style: italic;
+  margin: 0.5rem 0;
+}
+
+@keyframes ItemAnimate {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
