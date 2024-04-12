@@ -12,7 +12,7 @@
 .button:hover,
 .button:focus {
   outline: none;
-  background-color: #770000;
+  background-color: #6b0000;
 }
 
 .icon {
@@ -20,6 +20,7 @@
 }
 
 .label {
+  font-size: 0.75rem;
   margin: 0 0.75rem;
 }
 
@@ -33,15 +34,5 @@
 
 .button:hover .count,
 .button:focus .count {
-  background-color: #770000;
-}
-
-@media screen and (max-width: 400px) {
-  .label {
-    display: none;
-  }
-
-  .icon {
-    margin-right: 0.75rem;
-  }
+  background-color: #6b0000;
 }

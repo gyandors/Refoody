@@ -4,26 +4,12 @@
   gap: 0.5rem;
 }
 
-.amount-control {
-  font-weight: bold;
-}
-
-.amount-control input {
-  width: 2.5rem;
-  margin-left: 0.5rem;
-  padding: 2px;
-  border: 1px solid #bebebe;
-}
-
-.amount-control input:focus {
-  outline: none;
-}
-
 .form button {
   cursor: pointer;
-  padding: 0.5rem;
-  border: none;
-  border-radius: 20px;
+  padding: 0.3rem;
+  font: inherit;
+  border: 1px solid;
+  border-radius: 1rem;
   background-color: #920101;
   color: white;
 }
@@ -31,5 +17,6 @@
 .form button:hover,
 .form button:focus {
   outline: none;
-  background-color: #770000;
+  background-color: #6b0000;
+  border-color: #920101;
 }

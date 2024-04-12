@@ -1,0 +1,15 @@
+.input label {
+  font-weight: bold;
+}
+
+.input input {
+  width: 2.5rem;
+  padding: 0.1rem;
+  font-size: inherit;
+  border: 1px solid #bebebe;
+  border-radius: 5px;
+}
+
+.input input:focus {
+  outline: none;
+}
