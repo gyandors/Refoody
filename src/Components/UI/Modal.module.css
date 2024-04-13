@@ -1,0 +1,24 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #0000009c;
+  z-index: 20;
+}
+
+.overlay {
+  position: fixed;
+  top: 25%;
+  left: 50%;
+  width: 30rem;
+  transform: translate(-50%, 0);
+  z-index: 100;
+}
+
+@media screen and (max-width: 460px) {
+  .overlay {
+    width: 20rem;
+  }
+}

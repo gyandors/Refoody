@@ -16,11 +16,11 @@
 }
 
 .icon {
-  width: 1.45rem;
+  width: 1.8rem;
 }
 
 .label {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   margin: 0 0.75rem;
 }
 
@@ -30,9 +30,4 @@
   font-size: 1rem;
   border-radius: 40%;
   background-color: #df1616;
-}
-
-.button:hover .count,
-.button:focus .count {
-  background-color: #6b0000;
 }
