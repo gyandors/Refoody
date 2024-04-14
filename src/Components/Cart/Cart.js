@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styles from './Cart.module.css';
 import Modal from '../UI/Modal';
+import { CartContext } from '../../Context/CartContext';
 
 export default function Cart(props) {
+  const cartCtx = useContext(CartContext);
+
+  let totalAmount = 0;
+
   const cartItems = (
     <ul className={styles['cart-items']}>
-      {[{ id: 'c1', name: 'Sushi', quantity: 2, price: 32 }].map((item) => {
+      {cartCtx.items.map((item) => {
+        totalAmount += item.price;
         return <li key={item.id}>{item.name}</li>;
       })}
     </ul>
@@ -16,7 +22,7 @@ export default function Cart(props) {
       {cartItems}
       <section className={styles.section}>
         <span>Total Amount</span>
-        <span>35.63</span>
+        <span>{totalAmount}.00</span>
       </section>
       <footer className={styles.footer}>
         <button onClick={props.onClick}>Close</button>
