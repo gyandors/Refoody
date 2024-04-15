@@ -1,5 +1,7 @@
 .cart-items {
   list-style: none;
+  max-height: 20rem;
+  overflow: auto;
 }
 
 .section {
@@ -39,5 +41,4 @@
   outline: none;
   background-color: #6b0000;
   color: white;
-  border-color: #6b0000;
 }

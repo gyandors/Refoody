@@ -11,6 +11,12 @@ html {
 
 @media screen and (max-width: 460px) {
   html {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (min-width: 461px) and (max-width: 700px) {
+  html {
+    font-size: 0.85rem;
   }
 }

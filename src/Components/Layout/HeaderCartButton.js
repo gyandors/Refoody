@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import styles from './HeaderCartButton.module.css';
 import CartIcon from '../Cart/CartIcon';
 import Cart from '../Cart/Cart';
-import { CartContext } from '../../Context/CartContext';
+import CartContext from '../../Context/CartContext';
 
 export default function HeaderCartButton() {
   const [openCart, setOpenCart] = useState(false);
