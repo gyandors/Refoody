@@ -9,6 +9,13 @@ html {
   background-color: #4b4b4b;
 }
 
+button:focus {
+  outline: none;
+}
+button:active {
+  transform: scale(0.9);
+}
+
 @media screen and (max-width: 460px) {
   html {
     font-size: 0.7rem;

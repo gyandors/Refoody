@@ -15,7 +15,7 @@ export default function Cart(props) {
     cartCtx.removeItem(id);
   };
 
-  const cartItems = (
+  let cartItems = (
     <ul className={styles['cart-items']}>
       {cartCtx.items.map((item) => {
         return (
@@ -31,6 +31,10 @@ export default function Cart(props) {
       })}
     </ul>
   );
+
+  if (cartCtx.items.length === 0) {
+    cartItems = <div className={styles['empty-cart']}>Your cart is empty</div>;
+  }
 
   const hasItems = cartCtx.items.length > 0;
 

@@ -3,8 +3,8 @@ import CartContext from './CartContext';
 
 function cartReducer(state, action) {
   if (action.type === 'ADD') {
-    const updatedQuantity =
-      state.quantity + action.item.price * action.item.quantity;
+    const updatedTotalAmount =
+      state.totalAmount + action.item.price * action.item.quantity;
 
     const existingCartItemIndex = state.items.findIndex(
       (item) => item.id === action.item.id
@@ -23,39 +23,52 @@ function cartReducer(state, action) {
 
     return {
       items: updatedItems,
-      quantity: updatedQuantity,
+      totalAmount: updatedTotalAmount,
     };
   }
+
   if (action.type === 'REMOVE') {
-    console.log('removeItem');
-    // return
+    let updatedTotalAmount;
+    let updatedItems;
+    updatedItems = state.items.map((i) => {
+      if (i.id === action.id) {
+        updatedTotalAmount = state.totalAmount - i.price;
+        return { ...i, quantity: i.quantity - 1 };
+      }
+      return i;
+    });
+
+    updatedItems = updatedItems.filter((i) => i.quantity !== 0);
+
+    return {
+      items: updatedItems,
+      totalAmount: updatedTotalAmount,
+    };
   }
 
-  return { items: [], quantity: 0 };
+  return { items: [], totalAmount: 0 };
 }
 
 export default function CartProvider(props) {
   const [cartState, dispachCartState] = useReducer(cartReducer, {
     items: [],
-    quantity: 0,
+    totalAmount: 0,
   });
-
-  const cartContextValue = {
-    items: cartState.items,
-    totalAmount: cartState.quantity,
-    addItem: addItemToCart,
-    removeItem: removeItemFromCart,
-  };
 
   function addItemToCart(item) {
     dispachCartState({ type: 'ADD', item: item });
-    console.log(item);
   }
 
   function removeItemFromCart(id) {
     dispachCartState({ type: 'REMOVE', id: id });
   }
 
+  const cartContextValue = {
+    items: cartState.items,
+    totalAmount: cartState.totalAmount,
+    addItem: addItemToCart,
+    removeItem: removeItemFromCart,
+  };
   return (
     <CartContext.Provider value={cartContextValue}>
       {props.children}

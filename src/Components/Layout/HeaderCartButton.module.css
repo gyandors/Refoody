@@ -9,10 +9,12 @@
   align-items: center;
 }
 
-.button:hover,
-.button:focus {
-  outline: none;
+.button:hover {
   background-color: #6b0000;
+}
+
+.button:active {
+  transform: scale(0.9);
 }
 
 .icon {

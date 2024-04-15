@@ -14,9 +14,6 @@
   color: white;
 }
 
-.form button:hover,
-.form button:focus {
-  outline: none;
+.form button:hover {
   background-color: #6b0000;
-  border-color: #920101;
 }

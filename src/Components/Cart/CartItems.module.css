@@ -54,9 +54,8 @@
   margin: 0.25rem;
 }
 
-.actions button:hover,
-.actions button:focus {
-  outline: none;
+.actions button:active {
   background-color: #6b0000;
   color: white;
+  transform: scale(1);
 }

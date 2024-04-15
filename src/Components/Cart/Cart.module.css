@@ -1,3 +1,10 @@
+.empty-cart {
+  margin: 1rem;
+  text-align: center;
+  color: #df1616;
+  font-weight: bold;
+}
+
 .cart-items {
   list-style: none;
   max-height: 20rem;
@@ -26,7 +33,6 @@
   background: transparent;
   border: 1px solid #920101;
   border-radius: 1rem;
-  /* transition: transform 100ms; */
 }
 
 .footer .order {
@@ -35,10 +41,7 @@
   color: white;
 }
 
-.footer button:hover,
-.footer button:focus {
-  /* transform: scale(1.1, 1.1); */
-  outline: none;
+.footer button:hover {
   background-color: #6b0000;
   color: white;
 }
